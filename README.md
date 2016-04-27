@@ -12,14 +12,20 @@ Jar files to run Junit Tests:
 * junit.jar
 
 ### Instructions on how to run the code:
-1. Navigate to src folder and compile the code using the following command:  
+1. Clone this repository and navigate to src folder
+```
+git clone https://github.com/gsrajadh/Bash-Cartesian-Product.git
+cd Bash-Cartesian-Product/src
+```
+
+2. Compile the code using the following command:  
 ```
 javac CartesianProduct.java
 ```
 
 2. The code takes command line arguments which can be executed as the following example:  
 ```
-java CartesianProduct a{b,c}d{e,f,g}hi
+java CartesianProduct "a{b,c}d{e,f,g}hi"
 ```
 
 3. Compile JUnit Tests:  
