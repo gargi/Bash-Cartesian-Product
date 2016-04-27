@@ -30,7 +30,7 @@ java CartesianProduct "a{b,c}d{e,f,g}hi"
 
 3. Compile JUnit Tests:  
 ```
-javac -cp .:"/Users/gargi/Bash-Cartesian-Product/library/*" CartesianProductTest.java
+javac -cp .:"../library/*" CartesianProductTest.java
 ```
 
 4. Run JUnit Tests:  
