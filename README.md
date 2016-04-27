@@ -12,7 +12,7 @@ Jar files to run Junit Tests:
 * junit.jar
 
 ### Instructions on how to run the code:
-1. Clone this repository and navigate to src folder
+1. Clone this repository and navigate to src folder:
 ```
 git clone https://github.com/gsrajadh/Bash-Cartesian-Product.git
 cd Bash-Cartesian-Product/src
