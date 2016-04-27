@@ -3,7 +3,7 @@
 ### Contents:  
 #### src:
 1. CartesianProduct.java-Java Implementation of Bash Cartesian product
-2. UnclosedBracket.java- Code to check if the paranthesis are valid
+2. UnclosedBracket.java- Exception handling code to check if braces are valid
 3. CartesianProductTest.java-Unit Test cases to check the correctness of the code
 
 #### library:
