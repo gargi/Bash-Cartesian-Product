@@ -2,17 +2,19 @@ import java.util.ArrayList;
 
 public class CartesianProduct {
 	public String s;
-	int i=0;	
-	public CartesianProduct(String s) throws UnclosedBracket{
-		if(!balancedBracket(s))
-			throw new UnclosedBracket("Brackets not balanced in " + s);
+	int i=0;
+	public CartesianProduct(String s) throws InvalidString{
+		if(!validString(s))
+			throw new InvalidString("String is not valid: " + s);
 		this.s = "{" + s + "}";
 	}
 
 	//method to check for valid parenthesis
-	public boolean balancedBracket(String input) {  
-		int i = 0;             
+	public boolean validString(String input) {
+		int i = 0;
 		for (char c : input.toCharArray()) {
+			if(c!= '}' && c!= '{' && c!= ',' && !(c >= 'a' && c <= 'z') && !(c >= 'A' && c <= 'Z') && !(c>= '0' && c <= '9'))
+				return false;
 			if (c == '{')
 				i++;
 			if (c == '}')
@@ -47,10 +49,10 @@ public class CartesianProduct {
 				return result;
 			}
 			result = getElements(result);
-		} 
+		}
 		else {
 			String literal = "";
-			while (i < s.length() && s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
+			while (i < s.length() && ((s.charAt(i) >= 'a' && s.charAt(i) <= 'z') || (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z')|| (s.charAt(i) >= '0' && s.charAt(i) <= '9')) ) {
 				literal += s.charAt(i);
 				i++;
 			}
@@ -84,17 +86,16 @@ public class CartesianProduct {
 
 	public static void main(String args[]){
 		try{
-			if(args.length>0){				
+			if(args.length>0){
 				CartesianProduct product = new CartesianProduct(args[0]);
 				System.out.println(product.getCartesianProduct());
 			}
 		}
-		catch (UnclosedBracket e)   //check for valid parenthesis
+		catch (InvalidString e)   //check for valid parenthesis
 		{
-			e.printStackTrace();  
+			e.printStackTrace();
 		}
 		finally{
 		}
 	}
 }
-

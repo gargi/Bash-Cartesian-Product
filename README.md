@@ -2,8 +2,9 @@
 
 ### Contents:  
 #### src:
-1. CartesianProduct.java-Java Implementation of Bash Cartesian product
-2. UnclosedBracket.java- Exception handling code to check if braces are valid
+1. CartesianProduct.java-Java Implementation of Bash Cartesian product   
+2. InvalidString.java- Exception handling code to check if braces are valid and the characters are alphanumeric  
+I have assumed that the characters of the set can only be alphanumeric, for others it will throw an InvalidString error.
 3. CartesianProductTest.java-Unit Test cases to check the correctness of the code
 
 #### library:
